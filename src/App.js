@@ -4,17 +4,28 @@ import Greet from './components/Greet';
 //import Welcome from './components/Welcome';
 
 function App() {
-    const Name="abhishek"
+  
+  const user=[
+    {name:"Mars" ,isGasPlanet: false},
+    {name:"Earth" ,isGasPlanet: false},
+    {name:"Jupiter" ,isGasPlanet:true},
+    {name:"venus" ,isGasPlanet:false},
+    {name:"Neptune" ,isGasPlanet:true},
+    {name:"Uranus" ,isGasPlanet:true}
+  ];
+  
     return (
       <div className="App">
-        hrlllff
+        {user.map((nmme,key)=>!nmme.isGasPlanet && <h1 >{nmme.name} </h1>
+        )}
         <Greet/>
-        {Name}
         
-      
+        
       </div>
     );
   
 }
+
+
 
 export default App;
