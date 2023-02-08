@@ -1,18 +1,20 @@
 import React,{Component} from 'react';
 import './App.css';
 import Greet from './components/Greet';
-import Welcome from './components/Welcome';
+//import Welcome from './components/Welcome';
 
-class App extends Component {
-  render(){
+function App() {
+    const Name="abhishek"
     return (
       <div className="App">
-        <Greet />
-        <Welcome />
+        hrlllff
+        <Greet/>
+        {Name}
+        
       
       </div>
     );
-  }
+  
 }
 
 export default App;
