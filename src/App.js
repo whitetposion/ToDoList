@@ -15,7 +15,9 @@ function App() {
     setinputvlaue(event.target.value);
 
   }
-  const [text,settext ]=  useState(true);
+  
+  const [count,setcount ]=  useState(0);
+
   
   const user=[
     {name:"Mars" ,isGasPlanet: false},
@@ -34,9 +36,18 @@ function App() {
         <div>{age} <button onClick={increasedAge}>increase age</button></div>
         <input type="text" onChange={handleInput}/>{inputvalue}
         <button 
-        onClick={() => {settext(!text);
-        }}>show/hide</button>
-        {text && <h1>i can disappear</h1>}
+        onClick={() => { (setcount(count+1));
+        }}>increase
+        </button>
+        <button 
+        onClick={() => { setcount(count-1);
+        }}>decrease
+        </button>
+        <button 
+        onClick={() => { setcount(0);
+        }}>set to zero
+        </button>
+         <h1> {count}</h1>
       </div>
     );
   
