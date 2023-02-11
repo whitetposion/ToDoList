@@ -3,6 +3,23 @@
   color:rgb(18, 17, 17);
 }
 
+.taskList {
+  margin:0vh 5vh 0vh 10vh;
+  font-family:cursive;
+  font-size: medium;
+  background-color: #3278cc;
+  border-radius: 2vh;
+  
+}
+
+.addTask {
+  background-color: rgb(53, 53, 53);
+  margin:10vh 5vh 0vh 10vh;
+  padding: 5vh;
+  border-radius: 2vh;
+}
+
+
 
 
 

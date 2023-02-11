@@ -14,14 +14,15 @@ function App() {
   };
 
   const addTask = ()=> {
-    settodolist([...todolist, newTask]);
+    const task = {
+      id: todolist.length === 0 ? 1 : todolist[todolist.length-1].id + 1,
+      taskName:newTask
+    };
+    settodolist([...todolist,task]);
   };
 
-  const delete=(taskname)=> {
-    settodolist(todolist.filter()=>{
-      return
-    })
-  };
+  const deleteTask=(id)=> {
+    settodolist(todolist.filter((task) => task.id!==id))};
 
   return (
   <div className="App">
@@ -32,8 +33,8 @@ function App() {
     <div className= "taskList">
       {todolist.map((task)=>{
         return <div>
-          <h1>{task}</h1>
-          <button onClick={()=>delete(task)}>X</button>
+          <h1>{task.taskName}</h1>
+          <button onClick={()=>deleteTask(task.id)}>X</button>
           </div>
       })}
 
